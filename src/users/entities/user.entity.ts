@@ -7,14 +7,14 @@ export class User {
   id!: number;
 
   @Column({ nullable: true })
-  name?: string;
+  name!: string;
 
   @Column({ nullable: true, unique: true })
-  email?: string;
+  email!: string;
 
   @Column({ nullable: true })
-  password?: string;
+  password!: string;
 
   @OneToMany(() => Service, (service) => service.user)
-  services?: Service[];
+  services!: Service[];
 }
